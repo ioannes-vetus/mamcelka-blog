@@ -10,7 +10,7 @@ const baseUrl = '/pancelka-blog/';
 
 const config: Config = {
   title: 'Pančelka',
-  tagline: 'Notes on software and everything around it',
+  tagline: 'Myšlienky o učení a živote',
   favicon: 'img/favicon.ico',
 
   url: 'https://ioannes-vetus.github.io',
@@ -64,7 +64,7 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },

@@ -14,7 +14,7 @@ export default function Home(): React.ReactElement {
           <Avatar
             src="/img/me.jpeg"
             name="Natália Stará"
-            role="Učiteľka, mama, manželka"
+            role="Manželka, mama, učiteľka"
           />
 
           <h1>Vítajte</h1>
