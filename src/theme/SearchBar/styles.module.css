@@ -1,0 +1,226 @@
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: 140px;
+  height: 35px;
+  padding: 0 6px 0 10px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    border-color var(--ifm-transition-fast),
+    color var(--ifm-transition-fast);
+}
+
+.trigger:hover {
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-700);
+}
+
+.trigger:focus-visible {
+  border-color: var(--ifm-color-primary);
+  outline: none;
+}
+
+.triggerLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kbd {
+  flex-shrink: 0;
+  padding: 1px 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-family: inherit;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: min(20vh, 140px);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  width: min(620px, 90vw);
+  max-height: min(70vh, 520px);
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+[data-theme='dark'] .modal {
+  background: #252526;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.inputRow .searchIcon {
+  color: var(--ifm-color-emphasis-500);
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--ifm-color-content);
+}
+
+.input::placeholder {
+  color: var(--ifm-color-emphasis-400);
+}
+
+.kbdEsc {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-family: inherit;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.resultsList {
+  flex: 1;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.result {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--ifm-transition-fast);
+}
+
+.result[data-selected='true'] {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.resultTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ifm-color-content);
+}
+
+.resultSection {
+  margin-left: 4px;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.resultSnippet {
+  display: -webkit-box;
+  margin-top: 2px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ifm-color-emphasis-600);
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.mark {
+  padding: 0 1px;
+  border-radius: 2px;
+  background: rgba(91, 127, 201, 0.2);
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .mark {
+  background: rgba(143, 168, 212, 0.2);
+}
+
+.noResults {
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  font-size: 0.72rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.kbdSmall {
+  display: inline-block;
+  margin-right: 2px;
+  padding: 0 4px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 3px;
+  font-size: 0.68rem;
+  font-family: inherit;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.searchIcon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .trigger {
+    width: auto;
+    padding: 0 6px;
+    border: none;
+  }
+
+  .triggerLabel,
+  .kbd {
+    display: none;
+  }
+
+  .overlay {
+    padding-top: 0;
+  }
+
+  .modal {
+    width: 100vw;
+    max-height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.content {
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+}
+
+.content :global(h1),
+.content :global(h2),
+.content :global(h3) {
+  text-align: center;
+}
+
+.content :global(p),
+.content :global(ul),
+.content :global(ol),
+.content :global(blockquote) {
+  text-align: left;
+}
+
+.content :global(h2) {
+  margin-top: 3rem;
+}
