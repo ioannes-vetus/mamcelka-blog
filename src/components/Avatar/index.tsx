@@ -3,15 +3,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 export interface AvatarProps {
-  src?: string;
-  name?: string;
-  role?: string;
+  src: string;
+  name: string;
+  role: string;
 }
 
 export default function Avatar({
-  src = '/img/avatar-demo.svg',
-  name = 'Your Name',
-  role = 'Teacher',
+  src,
+  name,
+  role,
 }: AvatarProps): React.ReactElement {
   const resolvedSrc = useBaseUrl(src);
 

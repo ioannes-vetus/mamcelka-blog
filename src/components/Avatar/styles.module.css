@@ -10,7 +10,11 @@
 .ring {
   padding: 10px;
   border-radius: 50%;
-  background: linear-gradient(160deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary));
+  background: linear-gradient(
+    160deg,
+    var(--ifm-color-primary-lightest),
+    var(--ifm-color-primary)
+  );
   box-shadow: 0 20px 40px -12px rgba(20, 40, 30, 0.4);
   transition: transform 200ms ease;
 }

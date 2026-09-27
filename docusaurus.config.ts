@@ -5,16 +5,19 @@ import {buildSearchIndex} from './src/searchIndex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+// Served as a GitHub Pages project site: https://ioannes-vetus.github.io/pancelka-blog/
+const baseUrl = '/pancelka-blog/';
+
 const config: Config = {
   title: 'Pančelka',
   tagline: 'Notes on software and everything around it',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-domain.example',
-  baseUrl: '/',
+  url: 'https://ioannes-vetus.github.io',
+  baseUrl,
 
-  organizationName: 'pančelka',
-  projectName: 'pančelka',
+  organizationName: 'ioannes-vetus',
+  projectName: 'pancelka-blog',
 
   onBrokenLinks: 'throw',
   markdown: {
@@ -71,7 +74,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Natália Stará<a href="/blog/rss.xml" target="_blank" rel="noopener noreferrer" title="RSS Feed" aria-label="RSS Feed" class="footer-rss-link"><img src="/img/rss.svg" width="14" height="14" alt="RSS Feed"/></a>`,
+      copyright: `Copyright © ${new Date().getFullYear()} Pančelka<a href="${baseUrl}blog/rss.xml" target="_blank" rel="noopener noreferrer" title="RSS Feed" aria-label="RSS Feed" class="footer-rss-link"><img src="${baseUrl}img/rss.svg" width="14" height="14" alt="RSS Feed"/></a>`,
     },
     prism: {
       theme: prismThemes.github,

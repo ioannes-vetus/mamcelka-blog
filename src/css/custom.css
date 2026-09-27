@@ -23,7 +23,8 @@
   --ifm-background-color: var(--brand-cream);
   --ifm-font-color-base: var(--brand-ink);
   --ifm-heading-font-family: 'Fraunces', 'Georgia', serif;
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-font-family-base:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --ifm-heading-font-weight: 600;
   --ifm-line-height-base: 1.7;
   --ifm-code-font-size: 92%;
