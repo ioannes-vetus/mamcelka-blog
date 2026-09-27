@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
 import {useHistory} from '@docusaurus/router';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -144,83 +145,86 @@ export default function SearchBar(): React.ReactElement {
         <kbd className={styles.kbd}>⌘K</kbd>
       </button>
 
-      {isOpen && (
-        <div className={styles.overlay} onMouseDown={() => setIsOpen(false)}>
-          <div
-            className={styles.modal}
-            onMouseDown={(e) => e.stopPropagation()}>
-            <div className={styles.inputRow}>
-              <SearchIcon />
-              <input
-                ref={inputRef}
-                className={styles.input}
-                type="text"
-                placeholder="Hľadať na stránke…"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={handleKeyDown}
-              />
-              <kbd className={styles.kbdEsc}>Esc</kbd>
-            </div>
-
-            {results.length > 0 && (
-              <ul className={styles.resultsList}>
-                {results.map((r, i) => (
-                  <li
-                    key={r.id}
-                    className={styles.result}
-                    data-selected={i === selected}
-                    onMouseEnter={() => setSelected(i)}
-                    onClick={() => navigate(r.url)}>
-                    <div className={styles.resultTitle}>
-                      <Highlight text={r.title} terms={matchedTerms} />
-                      {r.section && (
-                        <span className={styles.resultSection}>
-                          › <Highlight text={r.section} terms={matchedTerms} />
-                        </span>
-                      )}
-                    </div>
-                    <div className={styles.resultSnippet}>
-                      <Highlight
-                        text={getSnippet(r.content, Object.keys(r.match))}
-                        terms={matchedTerms}
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            )}
-
-            {indexState === 'missing' && (
-              <div className={styles.noResults}>
-                Vyhľadávací index je dostupný až po zostavení (
-                <code>yarn build</code>).
+      {isOpen &&
+        createPortal(
+          <div className={styles.overlay} onMouseDown={() => setIsOpen(false)}>
+            <div
+              className={styles.modal}
+              onMouseDown={(e) => e.stopPropagation()}>
+              <div className={styles.inputRow}>
+                <SearchIcon />
+                <input
+                  ref={inputRef}
+                  className={styles.input}
+                  type="text"
+                  placeholder="Hľadať na stránke…"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                />
+                <kbd className={styles.kbdEsc}>Esc</kbd>
               </div>
-            )}
 
-            {indexState === 'ready' &&
-              query.length >= MIN_QUERY_LENGTH &&
-              results.length === 0 && (
+              {results.length > 0 && (
+                <ul className={styles.resultsList}>
+                  {results.map((r, i) => (
+                    <li
+                      key={r.id}
+                      className={styles.result}
+                      data-selected={i === selected}
+                      onMouseEnter={() => setSelected(i)}
+                      onClick={() => navigate(r.url)}>
+                      <div className={styles.resultTitle}>
+                        <Highlight text={r.title} terms={matchedTerms} />
+                        {r.section && (
+                          <span className={styles.resultSection}>
+                            ›{' '}
+                            <Highlight text={r.section} terms={matchedTerms} />
+                          </span>
+                        )}
+                      </div>
+                      <div className={styles.resultSnippet}>
+                        <Highlight
+                          text={getSnippet(r.content, Object.keys(r.match))}
+                          terms={matchedTerms}
+                        />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {indexState === 'missing' && (
                 <div className={styles.noResults}>
-                  Žiadne výsledky pre &ldquo;{query}&rdquo;
+                  Vyhľadávací index je dostupný až po zostavení (
+                  <code>yarn build</code>).
                 </div>
               )}
 
-            <div className={styles.footer}>
-              <span>
-                <kbd className={styles.kbdSmall}>↑</kbd>
-                <kbd className={styles.kbdSmall}>↓</kbd> pohyb
-              </span>
-              <span>
-                <kbd className={styles.kbdSmall}>↵</kbd> otvoriť
-              </span>
-              <span>
-                <kbd className={styles.kbdSmall}>esc</kbd> zavrieť
-              </span>
+              {indexState === 'ready' &&
+                query.length >= MIN_QUERY_LENGTH &&
+                results.length === 0 && (
+                  <div className={styles.noResults}>
+                    Žiadne výsledky pre &ldquo;{query}&rdquo;
+                  </div>
+                )}
+
+              <div className={styles.footer}>
+                <span>
+                  <kbd className={styles.kbdSmall}>↑</kbd>
+                  <kbd className={styles.kbdSmall}>↓</kbd> pohyb
+                </span>
+                <span>
+                  <kbd className={styles.kbdSmall}>↵</kbd> otvoriť
+                </span>
+                <span>
+                  <kbd className={styles.kbdSmall}>esc</kbd> zavrieť
+                </span>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body,
+        )}
     </>
   );
 }

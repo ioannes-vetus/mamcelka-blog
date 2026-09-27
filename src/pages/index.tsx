@@ -17,51 +17,52 @@ export default function Home(): React.ReactElement {
             role="Manželka, mama, učiteľka"
           />
 
-          <h1>Vítajte</h1>
+          <h1>Ahojte a vitajte!</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            V prvom rade vás chcem srdečne privítať na mojom blogu. Rada by som
+            tu vytvorila miesto plné inšpirácie, pokojného čítania a myšlienok,
+            ktoré možno pohladia dušu, prinútia zamyslieť sa alebo vás na chvíľu
+            zastavia v každodennom zhone.
           </p>
 
-          <h2>O mne</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            V prvom rade som manželka môjho milovaného muža, ktorý ma každý deň
+            podporuje, inšpiruje a stojí pri mne aj pri týchto mojich
+            „bláznivých“ nápadoch. Som mama mojich milovaných dievčat, Kláry a
+            Sáry. Sú to moje vysnívané, vymodlené dievčatá a ja si s nimi naplno
+            užívam každý jeden deň. Milujem náš dievčenský svet, ktorý si spolu
+            tvoríme. Učím ich pozerať sa na svet s láskou, s láskavým srdcom a
+            veľmi túžim, aby z nich vyrástli silné ženy – také, ktoré si veria,
+            majú zdravé sebavedomie, no zároveň sa neboja požiadať o pomoc.
+            Ženy, ktoré budú samy pre seba dosť.
           </p>
 
-          <h2>Čomu sa venujem</h2>
           <p>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt:
+            Som pani učiteľka v materskej škole a moje srdce pre toto povolanie
+            horí už od detstva. Zapálila ho vo mne moja milovaná babinka. Dnes
+            cítim veľkú pokoru aj zodpovednosť toto povolanie vykonávať s
+            hrdosťou, láskou a úctou. Verím, že je len málo profesií, ktoré majú
+            taký silný dopad na spoločnosť ako práve učiteľ – ten, ktorý
+            formuje, vedie a pomáha budovať budúce generácie.
           </p>
-          <ul>
-            <li>
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
-            </li>
-            <li>
-              Consectetur, adipisci velit, sed quia non numquam eius modi
-              tempora
-            </li>
-            <li>Ut labore et dolore magnam aliquam quaerat voluptatem</li>
-          </ul>
 
-          <h2>Zostanme v kontakte</h2>
           <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores et quas molestias excepturi sint occaecati cupiditate non
-            provident.
+            A v neposlednom rade som veriaci človek. Verím, že aj touto cestou
+            ma Pán Boh niekam vedie. Som vďačná za dar písania, ktorý som
+            dostala, a za možnosť zdieľať svoje myšlienky práve s vami.
+          </p>
+
+          <p>
+            Ak vás aspoň jedna veta z mojich článkov inšpiruje, pohladí alebo
+            vám vyčarí úsmev na tvári, má to pre mňa zmysel.
+          </p>
+
+          <p>
+            Tak si každú nedeľu večer zapáľte sviečku, zapnite svetielka, urobte
+            si čaj alebo sa zabaľte do deky. Urobte čokoľvek, pri čom sa cítite
+            príjemne… a začítajte sa. Moje články budú venované témam
+            rodičovstva, výchovy a vzdelávania – tak, ako ich žijem ja, nielen
+            ako učiteľka, ale najmä ako mama.
           </p>
         </div>
       </main>

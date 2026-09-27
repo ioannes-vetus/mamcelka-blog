@@ -62,8 +62,8 @@ props (no defaults) — the only call site is `src/pages/index.tsx`.
 ### `baseUrl` handling
 
 The site is deployed as a GitHub Pages *project* site at
-`https://ioannes-vetus.github.io/pancelka-blog/`, so `baseUrl` in `docusaurus.config.ts` is
-`/pancelka-blog/`, not `/`. A `const baseUrl` is defined once at the top of the config and reused
+`https://ioannes-vetus.github.io/mamcelka-blog/`, so `baseUrl` in `docusaurus.config.ts` is
+`/mamcelka-blog/`, not `/`. A `const baseUrl` is defined once at the top of the config and reused
 both for the `baseUrl` field and for hand-written absolute paths inside the footer's raw HTML
 `copyright` string (that string bypasses React's `useBaseUrl`/`<Link>` resolution, so it needs the
 prefix manually). If you hardcode any other absolute path (`/img/...`, `/blog/...`) outside JSX,

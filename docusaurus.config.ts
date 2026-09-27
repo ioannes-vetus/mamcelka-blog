@@ -5,19 +5,19 @@ import {buildSearchIndex} from './src/searchIndex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-// Served as a GitHub Pages project site: https://ioannes-vetus.github.io/pancelka-blog/
-const baseUrl = '/pancelka-blog/';
+// Served as a GitHub Pages project site: https://ioannes-vetus.github.io/mamcelka-blog/
+const baseUrl = '/mamcelka-blog/';
 
 const config: Config = {
-  title: 'Pančelka',
-  tagline: 'Myšlienky o učení a živote',
+  title: 'Mamčelka',
+  tagline: 'Úvahy o výchove z pohľadu mamy & učiteľky',
   favicon: 'img/favicon.ico',
 
   url: 'https://ioannes-vetus.github.io',
   baseUrl,
 
   organizationName: 'ioannes-vetus',
-  projectName: 'pancelka-blog',
+  projectName: 'mamcelka-blog',
 
   onBrokenLinks: 'throw',
   markdown: {
@@ -64,17 +64,17 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
-    image: 'img/social-card.jpg',
+    image: 'img/social-card.jpeg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Pančelka',
+      title: 'Mamčelka',
       items: [{to: '/blog', label: 'Blog', position: 'left'}],
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Pančelka<a href="${baseUrl}blog/rss.xml" target="_blank" rel="noopener noreferrer" title="RSS Feed" aria-label="RSS Feed" class="footer-rss-link"><img src="${baseUrl}img/rss.svg" width="14" height="14" alt="RSS Feed"/></a>`,
+      copyright: `Copyright © ${new Date().getFullYear()} Mamčelka<a href="${baseUrl}blog/rss.xml" target="_blank" rel="noopener noreferrer" title="RSS Feed" aria-label="RSS Feed" class="footer-rss-link"><img src="${baseUrl}img/rss.svg" width="14" height="14" alt="RSS Feed"/></a>`,
     },
     prism: {
       theme: prismThemes.github,
