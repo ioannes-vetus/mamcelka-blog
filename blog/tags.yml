@@ -1,3 +1,9 @@
-general:
-  label: General
-  description: Uncategorized posts.
+vychova:
+  label: výchova
+  description: Príspevky o výchove.
+emocie:
+  label: emócie
+  description: Príspevky o emóciách.
+zrkadlenie:
+  label: zrkadlenie
+  description: Príspevky o zrkadlení.
