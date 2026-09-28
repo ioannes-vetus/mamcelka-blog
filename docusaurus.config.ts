@@ -5,15 +5,16 @@ import {buildSearchIndex} from './src/searchIndex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-// Served as a GitHub Pages project site: https://ioannes-vetus.github.io/mamcelka-blog/
-const baseUrl = '/mamcelka-blog/';
+// Served on the custom domain https://mamcelka.sk/ (see static/CNAME), so it sits at the
+// domain root rather than under a GitHub Pages project-site subpath.
+const baseUrl = '/';
 
 const config: Config = {
   title: 'Mamčelka',
   tagline: 'Úvahy o výchove z pohľadu mamy & učiteľky',
   favicon: 'img/favicon.ico',
 
-  url: 'https://ioannes-vetus.github.io',
+  url: 'https://mamcelka.sk',
   baseUrl,
 
   organizationName: 'ioannes-vetus',

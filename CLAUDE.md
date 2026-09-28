@@ -61,17 +61,21 @@ props (no defaults) — the only call site is `src/pages/index.tsx`.
 
 ### `baseUrl` handling
 
-The site is deployed as a GitHub Pages *project* site at
-`https://ioannes-vetus.github.io/mamcelka-blog/`, so `baseUrl` in `docusaurus.config.ts` is
-`/mamcelka-blog/`, not `/`. A `const baseUrl` is defined once at the top of the config and reused
-both for the `baseUrl` field and for hand-written absolute paths inside the footer's raw HTML
-`copyright` string (that string bypasses React's `useBaseUrl`/`<Link>` resolution, so it needs the
-prefix manually). If you hardcode any other absolute path (`/img/...`, `/blog/...`) outside JSX,
-route it through this same `baseUrl` constant or it will 404 once deployed. Inside JSX/TSX, prefer
-`useBaseUrl()` or Docusaurus's `<Link>`, which handle this automatically.
+The site is served on the custom domain `https://mamcelka.sk/` (via `static/CNAME`), so it sits at
+the domain root and `baseUrl` in `docusaurus.config.ts` is `/`, not a GitHub Pages project-site
+subpath. A `const baseUrl` is still defined once at the top of the config and reused both for the
+`baseUrl` field and for hand-written absolute paths inside the footer's raw HTML `copyright` string
+(that string bypasses React's `useBaseUrl`/`<Link>` resolution, so it needs the prefix manually).
+If you hardcode any other absolute path (`/img/...`, `/blog/...`) outside JSX, route it through this
+same `baseUrl` constant so it stays consistent if the domain or path ever changes again. Inside
+JSX/TSX, prefer `useBaseUrl()` or Docusaurus's `<Link>`, which handle this automatically.
 
 ### Deployment
 
 GitHub Actions (`.github/workflows/ci.yml`) builds and deploys to GitHub Pages on every push to
 `main`. The repo's Settings → Pages source must be set to "GitHub Actions" for this to work — that's
-a one-time manual setting, not something the workflow file controls.
+a one-time manual setting, not something the workflow file controls. `static/CNAME` (containing
+`mamcelka.sk`) is what tells GitHub Pages to serve the custom domain instead of the default
+`<org>.github.io/<repo>/` URL; it gets copied into `build/` on every build since Docusaurus copies
+`static/` verbatim to the build root. If the custom domain ever changes, update both `static/CNAME`
+and the `url`/`baseUrl` constants in `docusaurus.config.ts` together.

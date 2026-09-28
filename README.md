@@ -45,7 +45,7 @@ The rest of the post, only shown on the full post page.
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/ci.yml`, which checks formatting, builds the site, and
-deploys it to GitHub Pages at `https://ioannes-vetus.github.io/mamcelka-blog/`.
+deploys it to GitHub Pages, served at the custom domain `https://mamcelka.sk/` (see `static/CNAME`).
 
 ## Commit messages
 
