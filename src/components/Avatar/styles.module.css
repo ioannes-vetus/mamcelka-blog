@@ -51,3 +51,22 @@
   text-transform: uppercase;
   color: var(--brand-gold);
 }
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  color: var(--ifm-color-primary);
+  opacity: 0.85;
+  transition: opacity var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+
+.socialLink:hover {
+  opacity: 1;
+}

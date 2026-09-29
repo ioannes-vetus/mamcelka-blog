@@ -12,9 +12,11 @@ export default function Home(): React.ReactElement {
       <main className={styles.main}>
         <div className={styles.content} data-search-content>
           <Avatar
-            src="/img/me.jpeg"
+            src="/img/me.JPG"
             name="Natália Stará"
             role="Manželka, mama, učiteľka"
+            instagramUrl="https://www.instagram.com/_nataliastara_/"
+            email="stranakovan01@gmail.com"
           />
 
           <h1>Ahojte a vitajte!</h1>

@@ -29,8 +29,8 @@ const config: Config = {
   },
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'sk',
+    locales: ['sk'],
   },
 
   stylesheets: [
@@ -50,7 +50,7 @@ const config: Config = {
           showReadingTime: true,
           postsPerPage: 10,
           blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'All posts',
+          blogSidebarTitle: 'Všetky príspevky',
           feedOptions: {
             type: ['rss'],
             copyright: `Copyright © ${new Date().getFullYear()}`,
@@ -75,7 +75,18 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Mamčelka<a href="${baseUrl}blog/rss.xml" target="_blank" rel="noopener noreferrer" title="RSS Feed" aria-label="RSS Feed" class="footer-rss-link"><img src="${baseUrl}img/rss.svg" width="14" height="14" alt="RSS Feed"/></a>`,
+      links: [
+        {
+          html: `<a href="${baseUrl}blog/rss.xml" target="_blank" rel="noopener noreferrer" title="RSS Feed" aria-label="RSS Feed" class="footer-social-link"><img src="${baseUrl}img/rss.svg" width="14" height="14" alt="RSS Feed"/></a>`,
+        },
+        {
+          html: `<a href="https://www.instagram.com/_nataliastara_/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram" class="footer-social-link"><img src="${baseUrl}img/instagram.svg" width="14" height="14" alt="Instagram"/></a>`,
+        },
+        {
+          html: `<a href="mailto:stranakovan01@gmail.com" title="E-mail" aria-label="E-mail" class="footer-social-link"><img src="${baseUrl}img/mail.svg" width="14" height="14" alt="E-mail"/></a>`,
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Mamčelka`,
     },
     prism: {
       theme: prismThemes.github,

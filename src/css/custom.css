@@ -73,18 +73,29 @@ h4 {
 
 .footer--dark {
   --ifm-footer-background-color: var(--brand-footer-bg);
+  --ifm-footer-padding-vertical: 0.5rem;
 }
 
-.footer__bottom {
-  position: relative;
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
-.footer-rss-link {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
+.footer__link-separator {
+  display: none;
+}
+
+.footer-social-link {
   display: inline-flex;
+  opacity: 0.8;
+  transition: opacity var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+
+.footer-social-link:hover {
+  opacity: 1;
 }
 
 .markdown > hr {
